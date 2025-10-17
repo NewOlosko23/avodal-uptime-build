@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uptime Monitor - Coming Soon</title>
+    <title>Avodal Uptime - Coming Soon</title>
     <meta name="description" content="Professional uptime monitoring for websites, APIs, and servers. Get real-time alerts and status pages. Coming soon with mobile apps for iOS and Android.">
     
     <!-- Preload Figtree font for faster loading -->
@@ -1607,10 +1607,11 @@
             submitButton.textContent = 'Joining...';
             
             try {
-                const response = await fetch('/api/waitlist/subscribe', {
+                const response = await fetch('https://champion-remarkably-stinkbug.ngrok-free.app/api/waitlist/subscribe', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                        'ngrok-skip-browser-warning': 'true'
                     },
                     body: JSON.stringify({
                         email: email,
